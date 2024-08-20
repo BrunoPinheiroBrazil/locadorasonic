@@ -18,7 +18,8 @@ namespace LocadoraSonic.Controllers
     [HttpGet("calculamaior")]
     public IActionResult CalculaMaior([FromQuery]int a, [FromQuery]int b)
     {
-      return Ok("Nada");
+            var maior= a>b?a:b;
+      return Ok($"O valor maior é {maior}");
     }
   }
 }
