@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35209.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocadoraSonic", "LocadoraSonic\LocadoraSonic.csproj", "{36995B7E-3B42-41FF-8CD7-AFA7ABDA917C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocadoraSonic.Tests", "LocadoraSonic.Tests\LocadoraSonic.Tests.csproj", "{88744812-FB23-4A1E-9023-F9B3B92E4AC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8A1A9F1C-AD3C-4FDD-A7A4-4CA8D20C7CAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocadoraSonic.Integration.Tests", "LocadoraSonic.Integration.Tests\LocadoraSonic.Integration.Tests.csproj", "{0E4BA6E3-D100-4400-9FD8-C7892ACC3BD1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36995B7E-3B42-41FF-8CD7-AFA7ABDA917C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36995B7E-3B42-41FF-8CD7-AFA7ABDA917C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36995B7E-3B42-41FF-8CD7-AFA7ABDA917C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36995B7E-3B42-41FF-8CD7-AFA7ABDA917C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88744812-FB23-4A1E-9023-F9B3B92E4AC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88744812-FB23-4A1E-9023-F9B3B92E4AC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88744812-FB23-4A1E-9023-F9B3B92E4AC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88744812-FB23-4A1E-9023-F9B3B92E4AC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E4BA6E3-D100-4400-9FD8-C7892ACC3BD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E4BA6E3-D100-4400-9FD8-C7892ACC3BD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E4BA6E3-D100-4400-9FD8-C7892ACC3BD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E4BA6E3-D100-4400-9FD8-C7892ACC3BD1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{88744812-FB23-4A1E-9023-F9B3B92E4AC1} = {8A1A9F1C-AD3C-4FDD-A7A4-4CA8D20C7CAB}
+		{0E4BA6E3-D100-4400-9FD8-C7892ACC3BD1} = {8A1A9F1C-AD3C-4FDD-A7A4-4CA8D20C7CAB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42D9135B-C638-4EE9-BE8C-D4EBD07099B0}
+	EndGlobalSection
+EndGlobal

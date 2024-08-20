@@ -1,0 +1,6 @@
+@LocadoraSonic_HostAddress = http://localhost:5268
+
+GET {{LocadoraSonic_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
