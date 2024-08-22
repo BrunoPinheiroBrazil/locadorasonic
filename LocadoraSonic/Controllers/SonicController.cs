@@ -6,8 +6,6 @@ namespace LocadoraSonic.Controllers
   [Route("[controller]")]
   public class SonicController : ControllerBase
   {
-    public SonicController() { }
-
     [HttpGet("sonic")]
     public IActionResult Sonic()
     {
