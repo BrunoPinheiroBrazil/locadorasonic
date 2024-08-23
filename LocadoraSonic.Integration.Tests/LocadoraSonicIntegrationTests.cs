@@ -58,6 +58,26 @@ namespace LocadoraSonic.Integration.Tests
       Assert.Equal(res, response.resposta);
       Assert.Equal(resConta, response.conta);
     }
+
+    [Theory(DisplayName = "GET - Envia um numero na Query(no endereço) e espera receber se é par ou impar")]
+    [InlineData(1, "Ímpar")]
+    [InlineData(2, "Par")]
+    [InlineData(3, "Ímpar")]
+    [InlineData(4, "Par")]
+    [InlineData(5, "Ímpar")]
+    [InlineData(6, "Par")]
+    public async Task Get_ParOuImpar(int numero, string respostaEsperada)
+    {
+      //Arrange
+      var url = $"calculos/parouimpar/?numero={numero}";
+
+      //Act
+      var (response, statusCode) = await _fixture.GetStringInApi(url);
+
+      //Assert
+      Assert.Equal(HttpStatusCode.OK, statusCode);
+      Assert.Equal(respostaEsperada, response);
+    }
   }
 
   public class OperacaoPlaceHolder
