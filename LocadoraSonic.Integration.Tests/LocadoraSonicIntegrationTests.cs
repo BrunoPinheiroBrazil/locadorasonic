@@ -78,6 +78,24 @@ namespace LocadoraSonic.Integration.Tests
       Assert.Equal(HttpStatusCode.OK, statusCode);
       Assert.Equal(respostaEsperada, response);
     }
+
+    [Theory(DisplayName = "GET - Envia uma palavra e o sistema deve retornar a palavra ao inverso Ex: sonic devera retornar cinos")]
+    [InlineData("sonic", "cinos")]
+    [InlineData("mickey", "yekcim")]
+    [InlineData("fafa", "afaf")]
+    [InlineData("12345", "54321")]
+    public async Task Get_InvertePalavra(string palavra, string palavraInvertidaEsperada)
+    {
+      //Arrange
+      var url = $"palavras/invertepalavra?palavra={palavra}";
+
+      //Act
+      var (response, statusCode) = await _fixture.GetStringInApi(url);
+
+      //Assert
+      Assert.Equal(HttpStatusCode.OK, statusCode);
+      Assert.Equal(palavraInvertidaEsperada, response);
+    }
   }
 
   public class OperacaoPlaceHolder
