@@ -34,11 +34,11 @@ namespace LocadoraSonic.Controllers
     }
 
     [HttpPost("retornaobjeto")]
-    public IActionResult RetoenaObjeto([FromBody] Sonic sonic)
+    public IActionResult RetornaObjeto([FromBody] Sonic sonic)
     {
-      var mensagem= $"o nome é {sonic.Nome}";
+      var mensagem = $"o nome é {sonic.Nome}";
       var situacao = "jovem";
-      if (sonic.Idade >=100) 
+      if (sonic.Idade >= 100)
       {
         situacao = "velho";
       }
@@ -47,6 +47,37 @@ namespace LocadoraSonic.Controllers
         Mensagem = mensagem,
         Situcao = situacao
       };
+      return Ok(resposta);
+    }
+    [HttpPost("operacao")]
+    public IActionResult ActionResult([FromBody] Operacao operacao)
+    {
+      var resposta = new RespostaOperacao();
+
+      if (operacao.operacao == "SOMA")
+      {
+        resposta.resposta = operacao.numero1 + operacao.numero2;
+        resposta.conta = $"{operacao.numero1} + {operacao.numero2} = {resposta.resposta}";
+      }
+      else if (operacao.operacao == "SUBTRAI")
+      {
+        resposta.resposta = operacao.numero1 - operacao.numero2;
+        resposta.conta = $"{operacao.numero1} - {operacao.numero2} = {resposta.resposta}";
+      }
+      else if (operacao.operacao == "MULTIPLICA")
+      {
+        resposta.resposta = operacao.numero1 * operacao.numero2;
+        resposta.conta = $"{operacao.numero1} * {operacao.numero2} = {resposta.resposta}";
+      }
+      else if (operacao.operacao == "DIVIDE")
+      {
+        if (operacao.numero2 > 0)
+        {
+          resposta.resposta = operacao.numero1 / operacao.numero2;
+          resposta.conta = $"{operacao.numero1} / {operacao.numero2} = {resposta.resposta}";
+        }
+        
+      }
       return Ok(resposta);
     }
   }
