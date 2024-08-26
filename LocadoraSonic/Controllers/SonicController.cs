@@ -1,4 +1,6 @@
-﻿using LocadoraSonic.Modelos;
+﻿
+using LocadoraSonic.Exemplos;
+using LocadoraSonic.Modelos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LocadoraSonic.Controllers
@@ -52,6 +54,12 @@ namespace LocadoraSonic.Controllers
     [HttpPost("operacao")]
     public IActionResult ActionResult([FromBody] Operacao operacao)
     {
+      var classeFilha = new ClasseFilha();
+      var classeMae = new ClasseMae();
+
+      classeFilha.Altura = 1;
+      classeFilha.Nome = "Filha";
+
       var resposta = new RespostaOperacao();
 
       if (operacao.operacao == "SOMA")
@@ -76,9 +84,10 @@ namespace LocadoraSonic.Controllers
           resposta.resposta = operacao.numero1 / operacao.numero2;
           resposta.conta = $"{operacao.numero1} / {operacao.numero2} = {resposta.resposta}";
         }
-        
+
       }
       return Ok(resposta);
+
     }
   }
 }

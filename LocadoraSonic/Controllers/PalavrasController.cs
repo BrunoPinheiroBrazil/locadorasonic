@@ -16,7 +16,14 @@ namespace LocadoraSonic.Controllers
     [HttpGet("invertepalavra")]
     public IActionResult InvertePalavra([FromQuery] string palavra)
     {
-      return Ok("Vacilo!");
+
+      // Converte a palavra em um array de caracteres, inverte o array e cria uma nova string
+      char[] array = palavra.ToCharArray();
+      Array.Reverse(array);
+      string palavraInvertida = new string(array);
+
+      // Retorna a palavra invertida
+      return Ok(palavraInvertida);
     }
   }
 }
