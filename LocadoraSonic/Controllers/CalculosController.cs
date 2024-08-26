@@ -13,8 +13,8 @@ namespace LocadoraSonic.Controllers
     //O metodo precisa validar a variável int que foi passada por parametro se é Par ou Impar. 
     //O método vai retornar um OK(com a resposta dentro). 
     //Boa sorte amigo sonic! 
-    [HttpGet("validaparouimpar")] //Operação REST (GET, POST, DELETE, UPDATE, PATCH) e caminho que é uma string que indica o endereço que vai ser chamado
-    public IActionResult ValidaParOuImpar([FromQuery] int numero) //Para montar é sempre [visibilidade] [Tipo] [Nome do metodo] [Entre parenteses os parametros]
+    [HttpGet("parouimpar")] //Operação REST (GET, POST, DELETE, UPDATE, PATCH) e caminho que é uma string que indica o endereço que vai ser chamado
+    public IActionResult ParOuImpar([FromQuery] int numero) //Para montar é sempre [visibilidade] [Tipo] [Nome do metodo] [Entre parenteses os parametros]
     { //Sempre chave parar abrir o bloco do metodo
       if (numero % 2 == 0)
       {
