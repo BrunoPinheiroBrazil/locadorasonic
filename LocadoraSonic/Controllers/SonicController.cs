@@ -1,6 +1,7 @@
 ﻿
 using LocadoraSonic.Exemplos;
 using LocadoraSonic.Modelos;
+using LocadoraSonic.Servicos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LocadoraSonic.Controllers
@@ -19,6 +20,10 @@ namespace LocadoraSonic.Controllers
     [HttpGet("calculamaior")]
     public IActionResult CalculaMaior([FromQuery] int a, [FromQuery] int b)
     {
+      ClasseEstaticaSonic.OlaMundoSonic();
+      ClasseEstaticaSonic.OlaMundoSonic();
+      ClasseEstaticaSonic.OlaMundoSonic();
+      ClasseEstaticaSonic.OlaMundoSonic();
       var maior = a > b ? a : b;
       return Ok($"O valor maior é {maior}");
     }
@@ -26,6 +31,7 @@ namespace LocadoraSonic.Controllers
     [HttpPost("calculalista")]
     public IActionResult CalculaLista([FromBody] List<int> a)
     {
+      Console.WriteLine("iniciando uma calcula lista.");
       var somaTotal = 0;
       for (int i = 0; i < a.Count; i++)
       {
