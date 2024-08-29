@@ -24,5 +24,14 @@
       }
       Console.WriteLine();
     }
+
+    public static void Exemplo3Lacos()
+    {
+      string[] s = { "Mickey", "Sonic", "Pato", "Lili" };
+      string[] p = { "Pato", "Mickey", "Vacilo", "Lili" };
+
+      //Só fazer aparecer na tela o valor da lista 's' que não encontrar na lista 'p'
+
+    }
   }
 }
