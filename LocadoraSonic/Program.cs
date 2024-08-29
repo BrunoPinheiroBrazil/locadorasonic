@@ -1,3 +1,7 @@
+using LocadoraSonic.Servicos;
+
+EstudosLacos.Exemplo2Lacos();
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
