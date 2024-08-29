@@ -9,7 +9,7 @@
 
       for (int i = 0; i < l.Length; i++)
       {
-        Console.WriteLine(l[i]);
+        Console.WriteLine($"os numeros corresponden as palavras {l[i]}.{s[i]}");
       }
     }
 
