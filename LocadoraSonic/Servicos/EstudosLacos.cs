@@ -31,7 +31,22 @@
       string[] p = { "Pato", "Mickey", "Vacilo", "Lili" };
 
       //Só fazer aparecer na tela o valor da lista 's' que não encontrar na lista 'p'
+      for (int h=0; h<s.Length;h++) 
+      {
+        var achou=false;
+        for (int g = 0; g < p.Length; g++)
+        {
+          if (s[h] == p[g])
+          {
+            achou = true;
 
+          }
+        }
+        if (achou == false)
+        {
+          Console.WriteLine($"o {s[h]} é o melhor amigo");
+        }
+      }
     }
   }
 }

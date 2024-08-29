@@ -1,7 +1,7 @@
 using LocadoraSonic.Servicos;
 
 EstudosLacos.Exemplo2Lacos();
-EstudosLacos.ExemploLacos();
+EstudosLacos.Exemplo3Lacos();
 
 
 var builder = WebApplication.CreateBuilder(args);
